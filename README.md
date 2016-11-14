@@ -1,3 +1,6 @@
+Βάλτε εδώ μέσα ποιά είναι η ομάδα σας!!!!!!
+
+
 echo "# social-network-new-site" >> README.md
 git init
 git add README.md
