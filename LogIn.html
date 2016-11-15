@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>SkyBox Είσοδος</title>
+<link rel='stylesheet' type='text/css' href='LogIn.css' /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+
+<script type="text/javascript">
+
+function stopRKey(evt) {
+  var evt = (evt) ? evt : ((event) ? event : null);
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+  if ((evt.keyCode == 13) && (node.type=="password"))  {return false;}
+}
+
+document.onkeypress = stopRKey;
+</script> 
+
+</head>
+<body>
+
+
+<form action="LogIn.php" method="post">
+<pre>
+
+
+
+
+	<Center> <p style="font-size:40px; font-weight:bold;">Καλως ηρθατε στο Skybox!</p></Center>
+	
+	
+	
+<div class="wrap">
+	<table width="500" align="center" border="0" cellpadding="3" cellspacing="1" bgcolor="transparent" bordercolor="transparent">
+		<tr>
+			<td colspan="3"><CENTER><h1><p style="margin-bottom: 30px; margin-top: 0px">Είσοδος</p></h1></CENTER></td>
+		</tr>
+	<table/>
+
+	
+		<table width="500" align="center" border="3" cellpadding="3" cellspacing="1" bgcolor="transparent" bordercolor="transparent">
+			<tr>
+				<td width="200"><h2><p style="margin-bottom: 0px; margin-top: 10px">&nbsp;&nbsp;&nbsp&nbspEmail</p></h2></td>
+				<td colspan="2" width="400"><input class="input" type="text" name="email" value="" size=40></td>
+			</tr>
+			<tr>
+				<td width="200"><h2><p style="margin-bottom: 0px; margin-top: 10px">&nbsp;&nbsp;&nbsp&nbspΚωδικός</p></h2></td>
+				<td colspan="2" width="400"><p style="margin-bottom:15px; margin-top: 15px"><input class="input" type="password" name="password" value="" size=40></p></td>
+			</tr>
+		</table>
+	<CENTER><a href="file:///C:/xampp/htdocs/v5/SignUp.html" target="_blank">Δημιουργία Λογαριασμού</a> <a href="file:///C:/xampp/htdocs/v5/main.php" target="_blank"> LogIn </a> </center>
+</div>	
+</pre>
+	
+	<script language="JavaScript"> document.forms[0].email.focus(); </script>
+</form>	
+
+</body>
+</html>
