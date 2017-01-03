@@ -8,6 +8,11 @@
 		$result=mysql_query("SELECT * FROM users WHERE AA='$aa'");
 		$row=mysql_fetch_array($result);
 		unset($_SESSION['log']);
+        
+        //euresi tou arithmou twn rewuests pou exei o xristis
+        $result2=mysql_query("SELECT * FROM req WHERE User1='$aa'");
+    	$row2=mysql_fetch_array($result2);
+        $num_rows = mysql_num_rows($result2);
 	}
     //ama den exei kanei ton stelnoume stin selida tis eisodou
 	else
@@ -24,8 +29,8 @@
 <head>
 <title>SkyBox</title>
 <link rel='stylesheet' type='text/css' href='main.css' /> 
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1253">
-<meta content="charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>
 
 <!--scriptaki to opoio xrwmatizei tin grammi tou pinaka pou epilegei o xristis 
@@ -71,7 +76,7 @@ function ChangeTextColor(a_obj,a_color){  ;
 		var user = "<?php echo $aa ?>";
 		var name = prompt("Enter the folder name", "");
 		var action = "create";
-		if (name != null)
+		if (name != "")
 			window.location.href = "functions.php?w1=" + user + "&w2=" + name + "&w3=" + action;					
 	}
      /* scriptaki to opoio kaleite otan patame to koumpi reaname to opoio emfanizei ena promt parathuro gia na eisagi o xristis
@@ -83,7 +88,7 @@ function ChangeTextColor(a_obj,a_color){  ;
 			var filenum=document.getElementById('row').value;
 			var action = "rename";
 			var name = prompt("Rename the folder/file", "");
-			if (name != null) 
+			if (name != "") 
 				window.location.href = "functions.php?w1=" + user + "&w2=" + name + "&w3=" + action + "&w4=" + filenum;				
 		}
 	}
@@ -110,7 +115,7 @@ function ChangeTextColor(a_obj,a_color){  ;
 			var filenum=document.getElementById('row').value;
 			var email = prompt("Give the Users Email", "");
 			var action = "share";
-			if (email != null) 
+			if (email != "") 
 				window.location.href = "functions.php?w1=" + user + "&w2=" + email+ "&w3=" + action + "&w4=" + filenum;		
 		}
 	}
@@ -140,7 +145,7 @@ function ChangeTextColor(a_obj,a_color){  ;
 
 <!-- emfanisi twn koumpiwn gia kafe leitourgia pou mporei na ektelesi o xristis -->
 <div class="wrap"><pre>
-<CENTER><input class="button" type="submit" value="Create Folder" name="submission" onClick="Create()">   <input class="button" type="submit" value="Share Folder" name="submission" onClick="Share()" id="share">    <input class="button" type="submit" value="Upload" name="submission" onClick="Upload()">    <input class="button" type="submit" value="Rename" name="submission" onClick="Rename()" id="rename">    <input class="button" type="submit" value="Delete" name="submission" onClick="Delete()" id="delete">    <input class="button" type="submit" value="Pendings" name="submission" onClick="Requests()"></CENTER>
+<CENTER><input class="button" type="submit" value="Create Folder" name="submission" onClick="Create()">   <input class="button" type="submit" value="Share Folder" name="submission" onClick="Share()" id="share">    <input class="button" type="submit" value="Upload" name="submission" onClick="Upload()">    <input class="button" type="submit" value="Rename" name="submission" onClick="Rename()" id="rename">    <input class="button" type="submit" value="Delete" name="submission" onClick="Delete()" id="delete">    <input class="button" type="submit" value="Pendings (<?php echo $num_rows; ?>)" name="submission" onClick="Requests()"></CENTER>
 <input type="submit" value="0" name="submission" id="row" style="color: transparent; background-color: transparent; border: 0px;">
 
 <!-- emfanisi pinaka me olous tous fakelous kai arxeia pou exei o xristis stin vasi-->
