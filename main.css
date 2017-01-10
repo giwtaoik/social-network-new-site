@@ -64,7 +64,7 @@ body {
 
 	width:80%;
 
-	margin:-960px auto;
+	margin-top: -62%;
 
 	border: 3px outset grey;
 
@@ -146,10 +146,8 @@ body {
 
 	background-color: #666;
 
-	margin-left: -1150px;
-
-	margin-top: -140px;
-
+	margin-left: -90%;
+	margin-top: -10%;
 }
 
 .back:hover{
@@ -184,9 +182,9 @@ border: 2px solid #666;
 
 	background-color: #666;
 
-	margin-left: -1150px;
-
-	margin-top: -80px;
+	margin-left: -90%;
+	
+	margin-top: -8%;
 
 }
 
