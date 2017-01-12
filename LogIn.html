@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>SkyBox Είσοδος</title>
+<!--- sundesi me to css arxeio gia tin xrisimopoiisi twn morfopioisewn tis selidas kai twn antikeimenwn tis -->
+<link rel='stylesheet' type='text/css' href='LogIn.css' /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+
+<script> 
+    function Redirect() {
+		window.location.href = "SignUp.html";					
+	}
+</script>
+
+</head>
+<body>
+<!--- sundesi me to php arxeio me tin voitheia tis methodou post -->
+<form action="LogIn.php" method="post">
+<pre>
+
+
+
+
+	<Center> <p style="font-size:40px; font-weight:bold;">Καλώς ήρθατε στο Skybox!</p></Center>
+	
+	
+<!--- emfanisi pinaka me editbox kai koumpia gia ekxwrsi dedomenwn apo ton xristi -->	
+<div class="wrap">
+	<table width="500" align="center" border="0" cellpadding="3" cellspacing="1" bgcolor="transparent" bordercolor="transparent">
+		<tr>
+			<td colspan="3"><CENTER><h1><p style="margin-bottom: 30px; margin-top: 0px">Είσοδος</p></h1></CENTER></td>
+		</tr>
+	<table/>
+
+	
+		<table width="500" align="center" border="3" cellpadding="3" cellspacing="1" bgcolor="transparent" bordercolor="transparent">
+			<tr>
+				<td width="200"><h2><p style="margin-bottom: 0px; margin-top: 10px">&nbsp;&nbsp;&nbsp&nbspEmail</p></h2></td>
+				<td colspan="2" width="400"><input class="input" type="text" name="email" value="" size=40 required></td>
+			</tr>
+			<tr>
+				<td width="200"><h2><p style="margin-bottom: 0px; margin-top: 10px">&nbsp;&nbsp;&nbsp&nbspΚωδικός</p></h2></td>
+				<td colspan="2" width="400"><p style="margin-bottom:15px; margin-top: 15px"><input class="input" type="password" name="password" value="" size=40 required></p></td>
+			</tr>
+		</table>
+	<CENTER><input class="button2" type="button" value="Δημιουργία Λογαριασμού" name="submission" onClick="Redirect()">   <input class="button" type="submit" value="LogIn" name="submission"></CENTER>
+</div>	
+</pre>
+	<!--- scriptaki na estiazei ton kersora sto pedio opou tha pliktrologisi o xristis to email -->
+	<script language="JavaScript"> document.forms[0].email.focus(); </script>
+</form>	
+
+</body>
+</html>
